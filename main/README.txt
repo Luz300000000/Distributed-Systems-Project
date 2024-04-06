@@ -7,8 +7,7 @@
 
 ---- <Informações sobre a Implementação do Projeto> ----
 
--- Instruções de Compilação e Execução--
-
+--> Instruções de Compilação e Execução <--
 - Abrir o terminal no diretório do projeto ("/grupo27")
 
 - (Instruções de compilação do makefile):
@@ -23,7 +22,6 @@
     - Para cada servidor, abrir um novo terminal no diretório do projeto e executar: "./binary/table_server <zookeeperip:port> <port> <n_lists>"
     - Para cada cliente, abrir um novo terminal no diretório do projeto e executar: "./binary/table_client <zookeeperip:port>"
 
--- Limitações de Implementação --
-
+--> Limitações de Implementação <--
 - Não foram encontradas limitações na implementação do sistema de replicação em cadeia usando o ZooKeeper.
 - Adicionalmente, recorremos ao Valgrind para procurar e resolver possíveis leaks de memória através de alguns testes, dos quais não encontrámos leaks de memória. Contudo, o Valgrind detetou alguns erros que são nativos do ZooKeeper e alguns warnings de conditional jumps que não afetam a funcionalidade do projeto.
