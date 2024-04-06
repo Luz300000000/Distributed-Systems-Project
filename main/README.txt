@@ -1,7 +1,5 @@
 ---- <Informações sobre o Grupo de Trabalho> ----
-
--- Grupo 027 --
-
+@ FCUL
 - Inês Luz         57552
 - Matilde Marques  58164
 - Marta Lourenço   58249
