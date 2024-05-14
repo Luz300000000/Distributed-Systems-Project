@@ -1,7 +1,7 @@
 ## Introduction and Main Goal
 - The main goal of this project consisted in implementing a (key, value) pair storage service (along the lines of the java.util.Map interface of the Java API) similar to the same one used by Amazon to support its Web services In this sense, the data structures used to store this information are a simple linked list and a hash table, given their high efficiency at the search level.
 
-## Description of the Implementation Stages
+## Implementation Stages
 **The project had 4 implementation stages:**
 - In **step 1**, data structures were defined and several functions were implemented to deal with
 with data manipulation by implementing a hash table from scratch. It was also built
