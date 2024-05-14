@@ -1,20 +1,19 @@
-## Introdução ao Tema do Projeto
-- O objetivo geral deste projeto focou-se na concretização de um serviço de armazenamento de pares (chave,valor) (nos moldes da interface java.util.Map da API Java) similar ao mesmo utilizado pela Amazon para dar suporte aos seus serviços Web. Neste sentido, as estruturas de dados utilizadas para armazenar esta informação são uma lista encadeada simples e uma tabela hash, dada a sua elevada eficiência ao nível da pesquisa.
+## Introduction and Main Goal
+- The main goal of this project consisted in implementing a (key, value) pair storage service (along the lines of the java.util.Map interface of the Java API) similar to the same one used by Amazon to support its Web services In this sense, the data structures used to store this information are a simple linked list and a hash table, given their high efficiency at the search level.
 
-## Descrição das Etapas de Implementação
-**O projeto consistiu em 4 etapas de implementação:**
-- Na **etapa 1** foram definidas estruturas de dados e implementadas várias funções para lidar
-com a manipulação dos dados que vão ser armazenados na tabela hash. Também foi construído
-um módulo para serialização de dados, que teve como objetivo destacar a
-necessidade de serializar dados para a comunicação em aplicações distribuídas.
-- Na **etapa 2** implementou-se um sistema cliente-servidor simples, no qual o servidor ficou
-responsável por manter uma tabela de hash e o cliente responsável por comunicar com o
-servidor para realizar operações na tabela. Foram também utilizados os **Protocol Buffers da
-Google** para automatizar a serialização e de-serialização dos dados, tendo por base um
-ficheiro sdmessage.proto com a definição da mensagem a ser usada na comunicação,
-tanto para os pedidos como para as respostas.
-- Na **etapa 3** foi criado um sistema concorrente que aceita e processa pedidos de múltiplos
-clientes em simultâneo através do uso de múltiplas threads. Este sistema também garante a
-gestão da concorrência no acesso a dados partilhados no servidor, concretizando uma
-funcionalidade adicional para obtenção de estatísticas do servidor.
-- Na **etapa 4** o sistema passou a suportar tolerância a falhas através de replicação do estado do servidor, seguindo o modelo Chain Replication e usando o serviço de coordenação **ZooKeeper**.
+## Description of the Implementation Stages
+**The project had 4 implementation stages:**
+- In **step 1**, data structures were defined and several functions were implemented to deal with
+with data manipulation by implementing a hash table from scratch. It was also built
+a module for data serialization, which aimed to highlight the
+need to serialize data for communication in distributed applications.
+- In **step 2** a simple client-server system was implemented, in which the server was
+responsible for maintaining a hash table and the client responsible for communicating with the
+server to perform operations on the table. We used **Protocol Buffers from
+Google** to automate the serialization and de-serialization of data, based on a
+sdmessage.proto file with the definition of the message to be used in communication,
+for both requests and responses.
+- In **step 3** a concurrent system was created that accept and process orders from multiple
+clients simultaneously through the use of multiple threads. This system also guaranteed the
+management of competition in access to data shared on the server. Additionally, we added a functionality to obtain relevant server statistics.
+- In **step 4** the system started to support fault tolerance through server state replication, following the Chain Replication Model, using **ZooKeeper** service to coordenate.
