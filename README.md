@@ -17,3 +17,4 @@ for both requests and responses.
 clients simultaneously through the use of multiple threads. This system also guaranteed the
 management of competition in access to data shared on the server. Additionally, we added a functionality to obtain relevant server statistics.
 - In **step 4** the system started to support fault tolerance through server state replication, following the Chain Replication Model, using **ZooKeeper** service to coordenate.
+- **Languages/Technologies used:** C, Google's Protocol Buffers, ZooKeeper CLI
